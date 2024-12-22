@@ -1,45 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-dars</title>
+    <title>Shaxsiy Ma'lumotlar</title>
 </head>
-<body>
-    <h1>Mening Sevimli Mashinam:</h1>
-    <hr>
-    <h2>Dunyodagi eng chiroyli giperkar ma'lum qilindi</h2>
-    <p>2021 yilda Bugatti Bolide Parijdagi 36-avtomobil festivalida dunyoning eng chiroyli giperkari deb topildi.</p>
-    <img src="BEbQ8oThMkQh7ah4HlAWPTdBnT6Umz0W.jpg" alt="" width="800" >
-    <br><br>
+<style>
+    body {
+        background-color: rgba(0, 0, 0, 0.153);
+        
+    }
+    input[type="text"], input[type="email"], input[type="number"]{
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 6px;
+        padding: 6px;
+        border-color: rgba(0, 0, 0, 0.359); 
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 5px;
+    }
+    input[type="reset"],input[type="submit"]{
+        padding: 7px 15px;
+        border: none;
+        color: white;
+        font-weight: 500;
+        border-radius: 3px;         
+    }
+    input[type="radio"],input[type="radio"]  {
+        padding: 7px 15px;
+        border: none;
+        color: white;
+        font-weight: 500;       
+        border-radius: 3px;
+    }
+    input[type="reset"] {
+        background-color: #c04155;
+    }
+    input[type="submit"] {
+        background-color: #30f109;
+    }
 
-    <p>Mashina 1882-yilda tashkil etilgan.</p>
-    <p>Ushbu model 2020 yil oxirida konsept sifatida namoyish qilingan.</p>
-    <p>Mashina 1450 kg og‘irlikka ega bo‘lib, uning dvigateli 1600 ot kuchini beradi.</p>
-    <p>Giperkarlar yo‘nalishida ushbu nomga da'vogarlik qilgan boshqa 3 ta model nomi </p>
-    <p>keltirilmagan. Biroq tanlov qodalariga ko‘ra, g‘oliblikka nomzod giperkarlar “sport</p>
-    <p>dizayniga va yuqori ko‘rsatkichlarga ega bo‘lgan” hamda narxi 60 ming yevrodan yuqori</p>
-    <p>turuvchi seriyali ishlab chiqariluvchi avtomobillar bo‘lishi kerak.</p>
-    <img src="SdiHP20RfwJEc4dFpDVa-nTf87vZ-SfY.jpg" width="800" alt="">
-     <br><br>
-        <p> Ushbu model 2020 yil oxirida konsept sifatida namoyish qilingan. Joriy yilda esa fransuz</p>
-        <p>kompaniyasi ushbu avtomobildan 40 dona ishlab chiqarishini, biroq ular umumiy </p>
-        <p>foydlanish ko‘chalariga qo‘yilmasligini e'lon qilgan.</p>
-    <img src="LY5MhLNir0f_rlUSumzk73hXyKecB6fu.jpg" width="800" alt="">
-    <p>Ma'lumotlarga ko‘ra, giperkarga joyidan qo‘zg‘alib, 100 km/soat tezlikka erishishi uchun</p>
-    <p>2 soniyadan kamroq, 200 km/soat tezlikka 4,36 soniya, 300 km/soat tezlikka erishishi</p>
-    <p>uchun esa 7,37 soniya vaqt talab etiladi. Shu bilan birga, kompaniya mashinaning hattoki</p>
-    <p>500 km/soatgacha tezlashishi mumkinligi haqida gapirib o‘tgan. Buning uchun</p>
-    <p>mashinaga 20,16 soniya vaqt kerak bo‘ladi.</p>
-    <img src="zJU4e0hUfhEiBi08a39MEQlUDpGfdnT0.jpg" width="800" alt="">
-    <br><br>
-    <img src="iBi3JTK3cH3q8GZv8RV8jPBb90pzjDwK.jpg" width="800" alt="">
-     <br><br>
-        <p>Bundan tashqari, festivalda Audi Q4 E-Tron Sportback eng chiroyli shou-kar, DS Aero.</p>
-        <p>Sport Lounge eng chiroyli konsept deb topilgan. Mercedes-Benz Vision AVTR futuristik</p>
-        <p>avtomobillar toifasida, Maserati MC20 esa superkarlar toifasida eng chiroyli deb e'tirof etilgan.</p>
     
-    <h2>Qo'shimcha ma'lumot uchun</h2>
-    <a target="_blank" href="https://kun.uz/news/2021/10/05/dunyodagi-eng-chiroyli-giperkar-malum-qilindi">Mashina haqida qiziqarli malumotlar</a>
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #027afd;
+    }
+    form {
+        
+        background-color: white;
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #575654;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+   
+    <form action="/submit-personal-info" method="post">
+        <h1>Shaxsiy Ma'lumotlarni Kiritish</h1>
+        <label for="ism">Ismingiz:</label><br>
+        <input type="text" id="ism" name="ism" placeholder="Ismingizni kiriting" required><br><br>
+
+        <label for="familiya">Familiyangiz:</label><br>
+        <input type="text" id="familiya" name="familiya" placeholder="Familiyangizni kiriting" required><br><br>
+
+        <label for="email">Email manzilingiz:</label><br>
+        <input type="email" id="email" name="email" placeholder="Email manzilingizni kiriting" required><br><br>
+
+        <label for="yosh">Yoshingiz:</label><br>
+        <input type="number" id="yosh" name="yosh" placeholder="Yoshingizni kiriting" required><br><br>
+
+        <label for="jins">Jinsingiz:</label><br>
+        <input type="radio" id="erkak" name="jins" value="erkak" required>
+        <label for="erkak">Erkak</label>
+        <input type="radio" id="ayol" name="jins" value="ayol" required>
+        <label for="ayol">Ayol</label><br><br>
+
+        <input type="submit" value="Ma'lumotni yuborish">
+        <input type="reset" value="Tozalash">
+    </form>
 </body>
-</html>     
+
+</html>
